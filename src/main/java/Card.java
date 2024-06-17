@@ -23,7 +23,7 @@ public class Card {
         return rank;
     }
 
-    public int getScore(Card card) {
-        return Rank.getValueByRankName(card.getRank());
+    public int getScore() {
+        return Rank.getValueByRankName(rank);
     }
 }

@@ -12,7 +12,7 @@ class CardTest {
     @DisplayName("카드에 따라 1~11 까지의 점수로 계산한다")
     void checkCardScore() {
         Card card = new Card("Hearts", "A");
-        assertThat(card.getScore(card)).isEqualTo(11);
+        assertThat(card.getScore()).isEqualTo(11);
     }
 
 //    @Test
