@@ -45,7 +45,7 @@ public enum Rank {
         return Arrays.stream(Rank.values())
                 .filter(rank -> rank.rankName.equals(rankName))
                 .findFirst()
-                .map(rank -> rank.getValue())
+                .map(Rank::getValue)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid rank name: " + rankName));
 
     }
