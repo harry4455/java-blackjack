@@ -11,7 +11,7 @@ public class Deck {
     public Deck() {
 
         String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
-        String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+        String[] ranks = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
         cards = new ArrayList<>();
 
         for (String suit : suits) {
