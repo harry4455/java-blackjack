@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public enum Rank {
     TWO("2", 2),
     THREE("3", 3),
@@ -26,4 +28,26 @@ public enum Rank {
         this.value = value;
         this.alternativeValue = alternativeValue;
     }
+
+    public String getRankName() {
+        return rankName;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public int getAlternativeValue() {
+        return alternativeValue;
+    }
+
+    public static int getValueByRankName(String rankName) {
+        return Arrays.stream(Rank.values())
+                .filter(rank -> rank.rankName.equals(rankName))
+                .findFirst()
+                .map(rank -> rank.getValue())
+                .orElseThrow(() -> new IllegalArgumentException("Invalid rank name: " + rankName));
+
+    }
+
 }

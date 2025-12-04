@@ -22,4 +22,8 @@ public class Card {
     public String getRank() {
         return rank;
     }
+
+    public int getScore(Card card) {
+        return Rank.getValueByRankName(card.getRank());
+    }
 }
